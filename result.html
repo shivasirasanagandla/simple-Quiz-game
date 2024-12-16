@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .message { font-size: 1.5em; margin: 20px; }
+        button { padding: 10px 20px; font-size: 1em; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    {% if correct %}
+        <div class="message" style="color: green;">🎉 Hurray! You got it right! 🎉</div>
+    {% else %}
+        <div class="message" style="color: red;">❌ Oops! Try again! ❌</div>
+    {% endif %}
+    <button onclick="location.href='/next'">Next Question</button>
+</body>
+</html>
